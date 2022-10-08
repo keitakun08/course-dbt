@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: stg_addresses
+    description: This table contains information on user address
+    columns:
+      - name: address_id
+        tests:
+        - unique
+        - not_null

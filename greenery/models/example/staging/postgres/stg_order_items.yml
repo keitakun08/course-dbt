@@ -1,0 +1,7 @@
+version: 2
+
+models:
+  - name: stg_order_items
+    description: This table contains information on all Greenery order items
+    columns:
+      - name: order_id

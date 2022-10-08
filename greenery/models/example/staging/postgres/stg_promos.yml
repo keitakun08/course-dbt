@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: stg_promos
+    description: This table contains information on all Greenery promos
+    columns:
+      - name: promo_id
+        tests:
+        - unique
+        - not_null

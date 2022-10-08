@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: stg_users
+    description: This table contains user information about each Greenery customers
+    columns:
+      - name: user_id
+        tests:
+        - unique
+        - not_null
