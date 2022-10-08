@@ -1,13 +1,17 @@
 1) How many users do we have? 130
 
-## Query ##
+Query
+
+```
 select
   count(distinct user_id)
 from stg_users;
+```
 
 2) On average, how many orders do we receive per hour? 15 orders per hour
 
-## Query ##
+Query
+```
 -- Creating a CTE to get the # of order per hour --
 with cte_order as (
   select
@@ -21,14 +25,20 @@ with cte_order as (
 select
   avg(order_count) as avg_order_count
 from cte_order;
+```
+
+####
 
 3) On average, how long does an order take from being placed to being delivered? 4 days (Rounding off from 3.89)
 
-## Query ##
+Query
+
+```
 select
   avg(datediff(day,created_at, delivered_at)) as day_diff
 from stg_orders
 where delivered_at is not null;
+```
 
 4) How many users have only made one purchase? Two purchases? Three+ purchases?
 One purchase: 25
@@ -37,7 +47,9 @@ Three+ purchases: 71
 
 Note: you should consider a purchase to be a single order. In other words, if a user places one order for 3 products, they are considered to have made 1 purchase.
 
-## Query ##
+Query
+
+```
 -- Creating a CTE to group the user based on their number of order --
 with cte_order_num as (
   select
@@ -62,11 +74,13 @@ select
   count(user_id)
 from cte_order_num
 group by 1;
+```
 
 5) On average, how many unique sessions do we have per hour? 39 unique sessions
 
-## Query ##
+Query
 
+```
 -- Creating a CTE to get the # of unique session per hour --
 with cte_session as (
   select
@@ -80,3 +94,4 @@ with cte_session as (
 select
   avg(count_unique_session) as avg_unique_session
 from cte_session;
+```
