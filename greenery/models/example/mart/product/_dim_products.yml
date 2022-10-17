@@ -1,0 +1,39 @@
+version: 2
+
+models:
+  - name: dim_products
+    description: ""
+    columns:
+      - name: product_id
+        description: ""
+
+      - name: product_name
+        description: ""
+
+      - name: product_price
+        description: ""
+
+      - name: total_product_inventory
+        description: ""
+
+      - name: total_product_order
+        description: ""
+
+      - name: current_inventory_count
+        description: ""
+
+      - name: need_restock
+        description: ""
+
+      - name: product_gross_revenue
+        description: ""
+
+      - name: total_product_page_view_count
+        description: ""
+
+      - name: total_product_add_to_cart_count
+        description: ""
+
+      - name: add_to_cart_rate
+        description: ""
+
