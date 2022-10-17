@@ -43,6 +43,6 @@ models:
       - name: delivered_at_utc
         description: ""
 
-      - name: status
+      - name: order_status
         description: ""
 

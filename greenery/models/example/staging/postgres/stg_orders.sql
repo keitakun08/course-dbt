@@ -17,5 +17,5 @@ SELECT
   shipping_service,
   estimated_delivery_at as estimated_delivery_at_utc,
   delivered_at as delivered_at_utc,
-  status
+  status as order_status
 FROM {{ source('postgres', 'orders') }}

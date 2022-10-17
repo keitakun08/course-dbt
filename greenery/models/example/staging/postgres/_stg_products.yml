@@ -9,12 +9,12 @@ models:
         tests:
         - unique
         - not_null
-      - name: name
+      - name: product_name
         description: ""
 
       - name: product_price
         description: ""
 
-      - name: inventory
+      - name: product_inventory
         description: ""
 
