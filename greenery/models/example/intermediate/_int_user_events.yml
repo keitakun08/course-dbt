@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: int_user_events
+    description: ""
+    columns:
+      - name: user_id
+        description: ""
+
+      - name: total_session
+        description: ""
+
+      - name: total_unique_session
+        description: ""
+
+      - name: first_session_created_at
+        description: ""
+
+      - name: latst_session_created_at
+        description: ""
+
+      - name: total_page_view
+        description: ""
+
+      - name: total_add_to_cart
+        description: ""
+
+      - name: total_checkout
+        description: ""
+
+      - name: total_package_shipped
+        description: ""
