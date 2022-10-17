@@ -41,3 +41,18 @@ For my setup, I have decided to create separate schema for intermediate and mart
 
 From my understanding, intermediate is a layer that involves heavy data transformation for a specific logic so instead of living in different mart, gathering them into one place makes more sense to me. Also I believe I can re-use intermediate models with different tables in different schema in mart.
 
+4) What assumptions are you making about each model? (i.e. why are you adding each test?)
+For now, I'm only adding primary key test (not null and unique) to the staging model due to time constraint.
+
+5) Did you find any “bad” data as you added and ran tests on your models? How did you go about either cleaning the data in the dbt model or adjusting your assumptions/tests?
+
+None so far
+
+dbt snapshot
+
+6) Which orders changed from week 1 to week 2? 
+
+Order ID
+'05202733-0e17-4726-97c2-0520c024ab85' 
+'914b8929-e04a-40f8-86ee-357f2be3a2a2' 
+'939767ac-357a-4bec-91f8-a7b25edd46c9'

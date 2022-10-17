@@ -6,17 +6,17 @@
 
 with cte_user_address as (
   select *
-  from int_user_addresses
+  from {{ ref('int_user_addresses') }}
 ),
 
 cte_user_orders as (
   select *
-  from int_user_orders
+  from {{ ref('int_user_orders') }}
 ),
 
 cte_user_events as (
   select *
-  from int_user_events
+  from {{ ref('int_user_events') }}
 ),
 
 cte_final as (
