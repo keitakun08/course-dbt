@@ -35,3 +35,9 @@ from cte_multiple_orders;
    - the $ amount of their order
    
    An analysis that I would like to conduct would be funnel analysis. With this analysis, we can see their behaviour on each stage (page views, checkout, add to cart) and create multiple user persona. For example. if a user has a high number of page views but they never have a low conversion rate on checkout stage, we can assume that the user won't purchase anything. If a user has a high conversion rate from checkout to package shipped, we can assume that this user will likely to come back and purchase again
+
+3) Within each marts folder, create intermediate models and dimension/fact models.
+For my setup, I have decided to create separate schema for intermediate and mart. I'm aware tha it is recommended to create intermediate folder inside mart but here's my reasoning:
+
+From my understanding, intermediate is a layer that involves heavy data transformation for a specific logic so instead of living in different mart, gathering them into one place makes more sense to me. Also I believe I can re-use intermediate models with different tables in different schema in mart.
+
