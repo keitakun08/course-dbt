@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: stg_events
+    description: This table contains information on Greenery's event data
+    columns:
+      - name: event_id
+        description: ""
+        tests:
+        - unique
+        - not_null
+
+      - name: session_id
+        description: ""
+
+      - name: user_id
+        description: ""
+
+      - name: event_type
+        description: ""
+
+      - name: page_url
+        description: ""
+
+      - name: created_at_utc
+        description: ""
+
+      - name: order_id
+        description: ""
+
+      - name: product_id
+        description: ""
+

@@ -5,6 +5,14 @@ models:
     description: This table contains information on all Greenery promos
     columns:
       - name: promo_id
+        description: ""
         tests:
         - unique
         - not_null
+
+      - name: discount
+        description: ""
+
+      - name: promo_status
+        description: ""
+

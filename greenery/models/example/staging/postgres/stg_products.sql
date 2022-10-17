@@ -7,6 +7,6 @@
 SELECT
   product_id,
   name,
-  price,
+  price as product_price,
   inventory
 FROM {{ source('postgres', 'products') }}

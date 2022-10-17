@@ -5,3 +5,11 @@ models:
     description: This table contains information on all Greenery order items
     columns:
       - name: order_id
+        description: ""
+
+      - name: product_id
+        description: ""
+
+      - name: order_quantity
+        description: ""
+

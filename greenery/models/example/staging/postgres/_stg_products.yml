@@ -5,6 +5,16 @@ models:
     description: This table contains information on all Greenery product
     columns:
       - name: product_id
+        description: ""
         tests:
         - unique
         - not_null
+      - name: name
+        description: ""
+
+      - name: product_price
+        description: ""
+
+      - name: inventory
+        description: ""
+

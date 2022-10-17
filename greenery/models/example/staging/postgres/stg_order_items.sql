@@ -7,5 +7,5 @@
 SELECT
   order_id,
   product_id,
-  quantity
+  quantity as order_quantity
 FROM {{ source('postgres', 'order_items') }}

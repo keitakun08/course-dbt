@@ -1,0 +1,48 @@
+version: 2
+
+models:
+  - name: stg_orders
+    description: This table contains information on all Greenery order
+    columns:
+      - name: order_id
+        description: ""
+        tests:
+        - unique
+        - not_null
+
+      - name: promo_id
+        description: ""
+
+      - name: user_id
+        description: ""
+
+      - name: address_id
+        description: ""
+
+      - name: created_at_utc
+        description: ""
+
+      - name: order_cost
+        description: ""
+
+      - name: shipping_cost
+        description: ""
+
+      - name: order_total
+        description: ""
+
+      - name: tracking_id
+        description: ""
+
+      - name: shipping_service
+        description: ""
+
+      - name: estimated_delivery_at_utc
+        description: ""
+
+      - name: delivered_at_utc
+        description: ""
+
+      - name: status
+        description: ""
+
