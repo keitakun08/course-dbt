@@ -1,0 +1,86 @@
+version: 2
+
+models:
+  - name: dim_users
+    description: ""
+    columns:
+      - name: user_id
+        description: ""
+
+      - name: first_name
+        description: ""
+
+      - name: last_name
+        description: ""
+
+      - name: full_name
+        description: ""
+
+      - name: email
+        description: ""
+
+      - name: phone_number
+        description: ""
+
+      - name: address_name
+        description: ""
+
+      - name: zipcode
+        description: ""
+
+      - name: state
+        description: ""
+
+      - name: country
+        description: ""
+
+      - name: user_created_at_utc
+        description: ""
+
+      - name: first_order_date_utc
+        description: ""
+
+      - name: latest_order_date_utc
+        description: ""
+
+      - name: have_ordered
+        description: ""
+
+      - name: days_to_first_order
+        description: ""
+
+      - name: total_gross_order_amount
+        description: ""
+
+      - name: total_shipping_amount
+        description: ""
+
+      - name: total_net_order_amount
+        description: ""
+
+      - name: total_order_quantity
+        description: ""
+
+      - name: total_session
+        description: ""
+
+      - name: total_unique_session
+        description: ""
+
+      - name: first_session_created_at
+        description: ""
+
+      - name: latst_session_created_at
+        description: ""
+
+      - name: total_page_view
+        description: ""
+
+      - name: total_add_to_cart
+        description: ""
+
+      - name: total_checkout
+        description: ""
+
+      - name: total_package_shipped
+        description: ""

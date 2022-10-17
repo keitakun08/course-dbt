@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: int_order_promos
+  - name: fact_orders
     description: ""
     columns:
       - name: order_id
@@ -22,6 +22,9 @@ models:
       - name: tracking_id
         description: ""
 
+      - name: user_id
+        description: ""
+
       - name: shipping_service
         description: ""
 
@@ -34,12 +37,14 @@ models:
       - name: delivery_days
         description: ""
 
+      - name: order_quantity
+        description: ""
+
       - name: promo_name
         description: ""
 
-      - name: discount
+      - name: promo_discount
         description: ""
 
       - name: promo_status
         description: ""
-
