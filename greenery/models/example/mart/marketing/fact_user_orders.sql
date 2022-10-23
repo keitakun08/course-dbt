@@ -12,7 +12,9 @@ with cte_user_address as (
 cte_orders as (
   select
     user_id,
+    order_id,
     count(*) as order_count,
+    count(distinct order_id) as unique_order_count,
     min(order_created_at_utc) as first_order,
     max(order_created_at_utc) as last_order,
     sum(order_cost) as total_gross_order_amount,
@@ -20,7 +22,7 @@ cte_orders as (
     sum(order_total) as total_net_order_amount,
     sum(order_quantity) as total_order_quantity
   from {{ ref('fact_orders') }}
-  group by 1
+  group by 1, 2 
 ),
 
 cte_user_events as (
@@ -30,13 +32,16 @@ cte_user_events as (
 
 cte_final as (
   select
+    {{ dbt_utils.surrogate_key(['ua.user_id', 'o.order_id']) }} as user_order_sk,
     ua.user_id,
     ua.first_name,
     ua.last_name,
     ua.full_name,
     ua.email,
     ua.phone_number,
+    o.order_id,
     o.order_count,
+    o.unique_order_count,
     o.first_order,
     o.last_order,
     o.total_gross_order_amount,
@@ -46,6 +51,7 @@ cte_final as (
     ue.first_session_created_at,
     ue.latest_session_created_at,
     ue.total_session,
+    ue.total_unique_session,
     ue.total_page_view,
     ue.total_add_to_cart,
     ue.total_checkout,
