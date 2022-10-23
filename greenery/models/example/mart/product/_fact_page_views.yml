@@ -1,0 +1,39 @@
+version: 2
+
+models:
+  - name: fact_page_views
+    description: ""
+    columns:
+      - name: session_id
+        description: ""
+
+      - name: user_id
+        description: ""
+
+      - name: first_name
+        description: ""
+
+      - name: last_name
+        description: ""
+
+      - name: total_page_view
+        description: ""
+
+      - name: total_add_to_cart
+        description: ""
+
+      - name: total_checkout
+        description: ""
+
+      - name: total_package_shipped
+        description: ""
+
+      - name: first_session_event
+        description: ""
+
+      - name: last_session_event
+        description: ""
+
+      - name: session_length_minutes
+        description: ""
+

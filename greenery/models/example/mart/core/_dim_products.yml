@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: dim_products
+    description: ""
+    columns:
+      - name: product_id
+        description: ""
+
+      - name: product_name
+        description: ""
+
+      - name: product_price
+        description: ""
+
+      - name: product_inventory
+        description: ""

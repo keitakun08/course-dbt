@@ -1,0 +1,66 @@
+version: 2
+
+models:
+  - name: fact_user_orders
+    description: ""
+    columns:
+      - name: user_id
+        description: ""
+
+      - name: first_name
+        description: ""
+
+      - name: last_name
+        description: ""
+
+      - name: full_name
+        description: ""
+
+      - name: email
+        description: ""
+
+      - name: phone_number
+        description: ""
+
+      - name: order_count
+        description: ""
+
+      - name: first_order
+        description: ""
+
+      - name: last_order
+        description: ""
+
+      - name: total_gross_order_amount
+        description: ""
+
+      - name: total_shipping_amount
+        description: ""
+
+      - name: total_net_order_amount
+        description: ""
+
+      - name: total_order_quantity
+        description: ""
+
+      - name: first_session_created_at
+        description: ""
+
+      - name: latest_session_created_at
+        description: ""
+
+      - name: total_session
+        description: ""
+
+      - name: total_page_view
+        description: ""
+
+      - name: total_add_to_cart
+        description: ""
+
+      - name: total_checkout
+        description: ""
+
+      - name: total_package_shipped
+        description: ""
+

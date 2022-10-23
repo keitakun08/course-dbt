@@ -7,6 +7,9 @@ models:
       - name: user_id
         description: ""
 
+      - name: session_id
+        description: ""
+
       - name: total_session
         description: ""
 
@@ -17,6 +20,15 @@ models:
         description: ""
 
       - name: latst_session_created_at
+        description: ""
+
+      - name: session_start
+        description: ""
+
+      - name: session_end
+        description: ""
+
+      - name: session_duration
         description: ""
 
       - name: total_page_view

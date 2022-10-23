@@ -4,7 +4,12 @@
   )
 }}
 
-WITH cte_product_details AS (
+WITH cte_products as (
+  select *
+  from {{ ref('dim_products') }}
+),
+
+cte_product_details AS (
   SELECT
     p.product_id,
     p.product_name,
@@ -14,7 +19,7 @@ WITH cte_product_details AS (
     total_product_inventory - total_product_order as current_inventory_count,
     iff(current_inventory_count < 10, true, false) as need_restock,
     p.product_price * total_product_order as product_gross_revenue
-  FROM {{ ref('stg_products') }} as p
+  FROM cte_products as p
   LEFT JOIN {{ ref('stg_order_items') }} as oi
     ON p.product_id = oi.product_id
   GROUP BY 1, 2, 3, 4
@@ -26,7 +31,7 @@ cte_product_events as (
     sum(case when event_type = 'page_view' then 1 else 0 end) as total_product_page_view_count,
     sum(case when event_type = 'add_to_cart' then 1 else 0 end) as total_product_add_to_cart_count,
     div0(total_product_add_to_cart_count, total_product_page_view_count) as add_to_cart_rate
-  FROM {{ ref('stg_products') }} as p
+  FROM cte_products as p
   LEFT JOIN {{ ref('stg_events') }} as e
     ON p.product_id = e.product_id
     AND e.product_id is not null

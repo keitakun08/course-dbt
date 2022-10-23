@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: dim_products
+  - name: fact_product_details
     description: ""
     columns:
       - name: product_id

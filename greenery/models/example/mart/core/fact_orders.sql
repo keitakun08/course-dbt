@@ -7,7 +7,7 @@
 with cte_orders as (
   SELECT
     o.order_id,
-    o.created_at_utc,
+    o.created_at_utc as order_created_at_utc,
     o.order_cost,
     o.shipping_cost,
     o.order_total,
