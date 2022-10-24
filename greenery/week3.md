@@ -9,7 +9,7 @@ Created event_types macro
 3) Post Hook
 
 Adding post hook grant role in dbt_projects.yml
-
+q
 4) dbt packages
 
 installed dbt-utils and used the dbt-utils.surrogate_key function to create surrogate key for fact_user_orders.sql
